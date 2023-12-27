@@ -18,12 +18,13 @@
   }
   .emoji-card {
     display: flex;
-    width: 300px;
+    width: 71vw;
     flex-direction: row;
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
     list-style-type: none;
+    margin-left: -30px;
   }
 
   .won-game-card {
@@ -58,7 +59,7 @@
   }
   .emoji-card {
     display: flex;
-    width: 80vw;
+    width: 75vw;
     flex-direction: row;
     flex-wrap: wrap;
     list-style-type: none;

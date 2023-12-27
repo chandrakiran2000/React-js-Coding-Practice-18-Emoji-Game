@@ -72,32 +72,6 @@ class EmojiGame extends Component {
     /*   this.setState(prevState => ({
       clickedEmojiList: [...prevState.clickedEmojiList, newEmoji],
     })) */
-
-    /* if (clickedEmojiList.length === 12) {
-      this.setState({isGamePlaying: false})
-      this.setState(prevState => ({
-        highestScore: 12,
-      }))
-    } else if (findEmoji.length > 0) {
-      this.setState({isGamePlaying: false})
-      this.setState(prevState => ({
-        highestScore:
-          prevState.clickedEmojiList.length > prevState.highestScore
-            ? prevState.clickedEmojiList.length
-            : prevState.highestScore,
-      }))
-    } else {
-      if (clickedEmojiList.length === 12) {
-        this.setState({isGamePlaying: false})
-        this.setState(prevState => ({
-          highestScore: 12,
-          clickedEmojiList: [],
-        }))
-      }
-      this.setState(prevState => ({
-        clickedEmojiList: [...prevState.clickedEmojiList, newEmoji],
-      }))
-    } */
   }
 
   renderEmojiGame = () => {
