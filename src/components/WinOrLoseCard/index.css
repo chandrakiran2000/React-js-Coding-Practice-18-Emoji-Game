@@ -1,0 +1,91 @@
+/* Write your code here. */
+
+@media screen and (max-width: 768px) {
+  .result-card {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+  }
+  .result-text-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-right: 30px;
+  }
+  .you-won-text {
+    color: #ffffff;
+    font-size: 25px;
+    margin-top: 10px;
+  }
+  .best-score {
+    color: #ffffff;
+    font-size: 20px;
+    margin-top: -10px;
+  }
+  .best-score-result {
+    color: #6a59ff;
+    font-size: 20px;
+    margin-top: -10px;
+  }
+  .play-again-btn {
+    color: #3d3d3d;
+    background-color: #ffce27;
+    height: 30px;
+    width: 100px;
+    border: none;
+    font-size: 13px;
+    text-align: center;
+    border-radius: 20px;
+  }
+
+  .result-img {
+    height: 200px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .result-card {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+  }
+  .result-text-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-right: 30px;
+  }
+  .you-won-text {
+    color: #ffffff;
+    font-size: 50px;
+    margin-top: 10px;
+  }
+  .best-score {
+    color: #ffffff;
+    font-size: 30px;
+    margin-top: -20px;
+  }
+  .best-score-result {
+    color: #6a59ff;
+    font-size: 40px;
+    margin-top: -30px;
+  }
+  .play-again-btn {
+    color: #3d3d3d;
+    background-color: #ffce27;
+    height: 50px;
+    width: 100px;
+    border: none;
+    font-size: 15px;
+    text-align: center;
+    border-radius: 20px;
+  }
+
+  .result-img {
+    height: 400px;
+  }
+}

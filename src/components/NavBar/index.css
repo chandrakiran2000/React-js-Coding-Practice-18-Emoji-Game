@@ -1,0 +1,96 @@
+/* Write your code here. */
+
+@media screen and (max-width: 768px) {
+  .navbar-card {
+    background-color: #ffffff33;
+    color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 10vh;
+    width: 100vw;
+  }
+  .nav {
+    display: flex;
+    flex-direction: row;
+    width: 90vw;
+  }
+  .addClas {
+    justify-content: space-between;
+  }
+  .logo-card {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+  }
+  .logo-img {
+    height: 30px;
+  }
+  .logo-text {
+    font-size: 16px;
+  }
+
+  .score-card {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+  }
+  .score-text {
+    font-size: 15px;
+    margin-right: 20px;
+  }
+  .total-score-text {
+    font-size: 15px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .navbar-card {
+    background-color: #ffffff33;
+    color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 15vh;
+    width: 100vw;
+  }
+  .nav {
+    display: flex;
+    flex-direction: row;
+    width: 70vw;
+  }
+  .addClas {
+    justify-content: space-between;
+  }
+
+  .logo-card {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+  }
+  .logo-img {
+    height: 70px;
+  }
+  .logo-text {
+    font-size: 25px;
+  }
+
+  .score-card {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+  }
+  .score-text {
+    font-size: 23px;
+    margin-right: 20px;
+  }
+  .total-score-text {
+    font-size: 23px;
+  }
+}
