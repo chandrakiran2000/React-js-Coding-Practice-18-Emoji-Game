@@ -24,6 +24,7 @@ class EmojiGame extends Component {
   state = {
     emojisList: this.props,
     isGamePlaying: true,
+    score: 0,
     highestScore: 0,
     clickedEmojiList: [],
   }
@@ -36,26 +37,42 @@ class EmojiGame extends Component {
 
   clickEmoji = id => {
     const {clickedEmojiList} = this.state
-    console.log(id)
+    const {emojisList} = this.props
+    console.log('bye')
     this.setState({emojisList: this.getShuffledEmojisList()})
     const newEmoji = {
       emojiId: id,
     }
     const findEmoji = clickedEmojiList.filter(each => each.emojiId === id)
-    //  console.log(findEmoji)
 
-    /* if (clickedEmojiList.length === 12) {
+    const isEmojiIsPresent = clickedEmojiList.includes(id)
+    console.log(isEmojiIsPresent)
+
+    /*  //  this condition also working properly
+    if (isEmojiIsPresent) {
+      this.setState({isGamePlaying: false})
+      this.setState(prevState => ({
+        highestScore:
+          prevState.score > prevState.highestScore
+            ? prevState.clickedEmojiList.length
+            : prevState.highestScore,
+      }))
+    } else {
+      if (emojisList.length - 1 === clickedEmojiList.length) {
         this.setState({isGamePlaying: false})
         this.setState(prevState => ({
           highestScore: 12,
         }))
-      }  */
-    if (clickedEmojiList.length === 12) {
-      this.setState({isGamePlaying: false})
+      }
       this.setState(prevState => ({
-        highestScore: 12,
+        clickedEmojiList: [...prevState.clickedEmojiList, id],
+        score: prevState.score + 1,
       }))
-    } else if (findEmoji.length > 0) {
+    } */
+
+    // below condition also working
+
+    if (findEmoji.length > 0) {
       this.setState({isGamePlaying: false})
       this.setState(prevState => ({
         highestScore:
@@ -64,14 +81,16 @@ class EmojiGame extends Component {
             : prevState.highestScore,
       }))
     } else {
+      if (clickedEmojiList.length === 11) {
+        this.setState({isGamePlaying: false})
+        this.setState(prevState => ({
+          highestScore: 12,
+        }))
+      }
       this.setState(prevState => ({
         clickedEmojiList: [...prevState.clickedEmojiList, newEmoji],
       }))
     }
-
-    /*   this.setState(prevState => ({
-      clickedEmojiList: [...prevState.clickedEmojiList, newEmoji],
-    })) */
   }
 
   renderEmojiGame = () => {
@@ -104,11 +123,11 @@ class EmojiGame extends Component {
   }
 
   renderingWinOrLossCard = () => {
-    const {isGamePlaying, clickedEmojiList} = this.state
+    const {isGamePlaying, isGameEnded, clickedEmojiList} = this.state
     return (
       <div className="won-game-card">
         <WinOrLoseCard
-          isGamePlaying={isGamePlaying}
+          isGameEnded={isGameEnded}
           clickedEmojiList={clickedEmojiList}
           handlePlayBtn={this.handlePlayBtn}
         />
@@ -117,7 +136,12 @@ class EmojiGame extends Component {
   }
 
   render() {
-    const {isGamePlaying, highestScore, clickedEmojiList} = this.state
+    const {
+      isGamePlaying,
+      isGameEnded,
+      highestScore,
+      clickedEmojiList,
+    } = this.state
     //  console.log(emojisList)
     return (
       <div className="bg-card">

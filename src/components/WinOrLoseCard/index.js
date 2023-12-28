@@ -2,9 +2,9 @@
 import './index.css'
 
 const WinOrLoseCard = props => {
-  const {handlePlayBtn, clickedEmojiList, isGamePlaying} = props
+  const {handlePlayBtn, clickedEmojiList} = props
   const score = clickedEmojiList.length
-  const result = clickedEmojiList.length === 12
+  const result = score === 12
 
   const loseImg = 'https://assets.ccbp.in/frontend/react-js/lose-game-img.png'
   const winImg = 'https://assets.ccbp.in/frontend/react-js/won-game-img.png'
